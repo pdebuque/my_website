@@ -1,12 +1,10 @@
 // import './App.css';
 import { Routes, Route, } from 'react-router-dom';
 import Home from '../Home/Home'
-/* v6: 
-no exact path anymore
-e.g. Route path = '/' element = {<Home />}
+import Writing from '../Writing/Writing'
+import Code from '../Code/Code'
+import Music from '../Music/Music'
 
-
-*/
 
 function App() {
   return (
@@ -17,7 +15,10 @@ function App() {
 
       </header>
       <Routes>
-        <Route path='/' element={<Home />}/>
+        <Route path='/' element={<Home />} />
+        <Route path='/code' element={<Code />} />
+        <Route path='/writing' element={<Writing />} />
+        <Route path='/music' element={<Music />} />
 
 
       </Routes>
