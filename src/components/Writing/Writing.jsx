@@ -1,13 +1,6 @@
-export default function Blog() {
+export default function Writing() {
 
-  const blogposts = [
-    {
-      title: '',
-      body: '',
-      date: '',
-      
-    }
-  ]
+
 
 
   return(

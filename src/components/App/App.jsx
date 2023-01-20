@@ -3,7 +3,10 @@ import { Routes, Route, } from 'react-router-dom';
 import Home from '../Home/Home'
 import Writing from '../Writing/Writing'
 import Code from '../Code/Code'
-import Music from '../Music/Music'
+import Music from '../Music/Music';
+import Post from '../Post/Post';
+
+import {posts} from '../../articles';
 
 
 function App() {
@@ -17,8 +20,13 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/code' element={<Code />} />
-        <Route path='/writing' element={<Writing />} />
+        <Route path='/writing' element={<Writing />} >
+          {posts.map(post=><Route path = {`/${post.id}`} element = {<Post/>}/>)}
+
+          </Route>
         <Route path='/music' element={<Music />} />
+
+        
 
 
       </Routes>
